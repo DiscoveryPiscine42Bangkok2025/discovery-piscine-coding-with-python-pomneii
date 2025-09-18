@@ -1,0 +1,50 @@
+Pawn (P):
+. . . . . . .
+. . . . . . .
+. . X . X . .
+. . . P . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+P(X,Y) -> 	P(X,Y+1)	P(X,Y-1)
+Bishop (B):
+X . . . . . X
+. X . . . X .
+. . X . X . .
+. . . B . . .
+. . X . X . .
+. X . . . X .
+X . . . . . X
+B(X,Y) ->   B(X-1,Y-1)	B(X-2,Y-2)	B(X-3,Y-3) #ซ้ายล่าง
+            B(X+1,Y-1)	B(X+2,Y-2)	B(X+3,Y-3) #ขวาล่าง
+			B(X-1,Y+1)	B(X-2,Y+2)	B(X-3,Y+3) #ซ้ายบน
+            B(X+1,Y+1)	B(X+2,Y+2)	B(X+3,Y+3) #ขวาบน
+Rook (R):
+. . . X . . .
+. . . X . . .
+. . . X . . .
+X X X R X X X
+. . . X . . .
+. . . X . . .
+. . . X . . .
+R(X,Y) ->	R(X,Y+1)	R(X,Y+2)	R(X,Y+3) #บน
+			R(X,Y-1)	R(X,Y-2)	R(X,Y-3) #ล่าง
+			R(X-1,Y)	R(X-2,Y)	R(X-3,Y) #ซ้าย
+			R(X+1,Y)	R(X+2,Y)	R(X+3,Y) #ขวา
+
+Queen (Q)
+X . . X . . X
+. X . X . X .
+. . X X X . .
+X X X Q X X X
+. . X X X . .
+. X . X . X .
+X . . X . . X
+Q(X,Y) ->	B + R
+
+(1) One King
+
+(1) One Queen
+(2) Two Bishops
+(2) Two Rooks
+(8) Eight Pawns
